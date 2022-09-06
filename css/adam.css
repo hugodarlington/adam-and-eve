@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* navigation bar */
+
+nav {
+    background-image: url(../img/sliderimg02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10vh;
+    background-attachment: scroll;
+    width: 100vw;
+    min-height: 600px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    margin-top: 1rem;
+    left: 5rem;
+}
+
+.nav-links {
+    position: absolute;
+    top: 2rem;
+    right: 10rem;
+
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.menu a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+/* dropdown menu */
+.social-accounts {
+    position: inherit;
+}
+
+.dropdown a {
+    color: black;
+    font-size: 14px;
+
+}
+
+.dropdown {
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    margin-top: 2rem;
+    right: 1rem;
+}
+
+.dropdown li+li {
+    margin-top: 13px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 12rem;
+    text-align: left;
+}
+
+.dropdown :hover {
+    background-color: rgba(228, 230, 230, 0.74);
+    color: red;
+    animation: ease-out 5s;
+}
+
+.social-accounts:hover .dropdown {
+    display: block;
+}
+
+/* navbar is responsive */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* hamburger starts */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+
+.title {
+    position: absolute;
+    top: 27%;
+    left: 30%;
+}
+
+.title h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+}
+
+.title p {
+    color: rgb(110, 110, 108);
+    font-size: 1.3rem;
+}
+
+.title button {
+    position: absolute;
+    left: 9rem;
+    top: 16rem;
+    background-color: red;
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px 50px;
+    outline: none;
+    border: none;
+
+}
+
+.title button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.title button:hover {
+    color: #fff;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px 50px;
+    outline: none;
+    border: solid #fff;
+
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        /* bottom: 5rem; */
+        background-color: black;
+        height: 98vh;
+        width: 10rem;
+        color: #fff;
+        margin-right: 6rem;
+        z-index: 1;
+
+    }
+
+
+    input[type="checkbox"]:checked~.menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .title{
+        position: relative;
+    }
+
+    .title h1{
+        position: absolute;
+        color: white;
+        font-size: 2rem;
+        
+    }
+
+    .title p{
+        position: absolute;
+        top: 6rem;
+        left:-5rem ;
+        text-align: center;
+    }
+
+    .title button{
+        left: 2rem;
+    }
+
+    .title p{
+        word-wrap: break-word;
+    }
+}
